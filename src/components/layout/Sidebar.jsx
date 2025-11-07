@@ -2,7 +2,7 @@ import React from "react";
 
 function Sidebar() {
   return (
-    <div className="w-80 h-screen bg-gray- text-black p-4">
+    <div className="w-80 h-screen bg-gray-100 text-black p-4">
       <svg
         width="170"
         height="41"
