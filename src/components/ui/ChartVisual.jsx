@@ -3,7 +3,6 @@ import React from "react";
 function ChartVisual() {
   return (
     <div>
-      <h3>BTC Prices</h3>
       <svg
         width="600"
         height="508"

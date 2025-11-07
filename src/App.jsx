@@ -5,7 +5,6 @@ import ChartVisual from "./components/ui/ChartVisual";
 import MetricCard from "./components/ui/MetricCard";
 import TransactionTable from "./components/ui/TransactionTable";
 import LiveMarket from "./components/ui/LiveMarket";
-// import MainContent from "./components/layout/MainContent";
 
 function App() {
   return (
@@ -19,26 +18,25 @@ function App() {
         <Header />
 
         {/* Main Content Area - Scrollable */}
-        <main className="flex-1 overflow-y-auto bg-gray-100 p-6">
-          {/* <MainContent /> */}
-
-          {/* Metrics Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-            <MetricCard />
+        <main className="flex-1 overflow-y-auto bg-white-100 p-6">
+          {/* Top Row: MetricCard (left) and ChartVisual (right) */}
+          <div className="flex gap-6 mb-6">
+            <div className="flex-shrink-0">
+              <MetricCard />
+            </div>
+            <div className="flex-shrink-0">
+              <ChartVisual />
+            </div>
           </div>
 
-          {/* Chart Section */}
-          <div className="mt-6">
-            <ChartVisual />
-          </div>
-
-          {/* Transaction Table */}
-          <div className="mt-6">
-            <TransactionTable />
-          </div>
-
-          <div className="mt-6">
-            <LiveMarket />
+          {/* Bottom Row: LiveMarket (left) and TransactionTable (right) */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0">
+              <LiveMarket />
+            </div>
+            <div className="flex-shrink-0">
+              <TransactionTable />
+            </div>
           </div>
         </main>
       </div>
